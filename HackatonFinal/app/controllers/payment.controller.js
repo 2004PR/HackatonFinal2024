@@ -4,10 +4,11 @@ var jwt = require("jsonwebtoken");
 const request = require("request")
 const Culqi = require("culqi-node")
 const config = require("../config/auth.config");
+const dotenv = require("dotenv");
 const culqi = new Culqi({
-    privateKey: 'sk_test_SWyklAB8rIyjXmje',
+    privateKey: process.env.privateKey,
     pciCompliant: true,
-    publicKey: 'pk_test_27f4fbc0ddc64976',
+    publicKey: process.env.publicKey,
 });
 const User = db.user;
 const Role = db.role;
