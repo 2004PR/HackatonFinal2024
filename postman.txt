@@ -1,0 +1,57 @@
+GET https://hackatonfinal2024.onrender.com/api/test/admin
+GET http://https://hackatonfinal2024.onrender.com/api/test/all
+
+POST https://hackatonfinal2024.onrender.com/api/auth/signup
+{
+    "username":"2pr2004",
+    "email": "ramoslirion2021@gmail.com",
+    "password": "contraseña",
+    "roles":["user","moderator","admin"]
+}
+
+POST https://hackatonfinal2024.onrender.com/api/auth/signin
+{
+    "username":"2pr2004",
+    "password": "contraseña"
+}
+
+POST http://https://hackatonfinal2024.onrender.com/api/product/add
+{
+    "name":"Objeto de Prueba 10",
+    "price": 4000,
+    "description":"Prueba",
+    "category":"prueba"
+}
+
+DELETE http://https://hackatonfinal2024.onrender.com/api/product/delete
+{
+    "objectId":"66516d81052fbba2af667f9c"
+}
+
+POST http://https://hackatonfinal2024.onrender.com/api/token/culqui
+{
+    "products": [
+        {
+            "name":"Among Us Edicion de Collecion",
+            "price":1000
+        },{
+            "name":"Objeto",
+            "price":500
+        }
+    ],
+    "firstName":"Persona",
+    "lastName":"Real",
+    "currency":"PEN",
+    "cardNum": 4111111111111111,
+    "cvv": "123",
+    "expirationM": "09",
+    "expirationY": "2025",
+    "email":"personareal@gmail.com"
+}
+
+GET http://https://hackatonfinal2024.onrender.com/api/product/price
+
+GET http://https://hackatonfinal2024.onrender.com/api/product/category
+{
+    "filter":"prueba"
+}
